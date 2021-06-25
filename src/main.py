@@ -10,7 +10,6 @@ config = json.load(open("config.json"))
 @client.event
 async def on_ready():
     print(f"Bot logged in as User {client.user.name}#{client.user.discriminator}")
-    await client.change_presence(activity=discord.Game(f"{config['rich-presence']}"), status=discord.Status.online)
 
 
 @client.event
